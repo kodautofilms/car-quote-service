@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="quote.html">Quote</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Services</h2>
+            <ul id="servicesList"></ul>
+        </div>
+
+        <div class="image-container">
+            <img id="carImage" src="image.png" alt="Car Image" usemap="#carMap">
+            <svg class="overlay" id="quarterGlassOverlay"></svg>
+            <svg class="overlay" id="rightRearDoorOverlay"></svg>
+        </div>
+    </div>
+
+    <map name="carMap" id="carMap">
+        <area shape="poly" coords="442,415,504,381,490,441,444,431" alt="Quarter Glass" data-overlay="quarterGlassOverlay" onclick="showPopup('Quarter Glass')">
+        <area shape="poly" coords="454,496,510,380,654,354,629,477" alt="Right Rear Door" data-overlay="rightRearDoorOverlay" onclick="showPopup('Right Rear Door')">
+    </map>
+
+    <div id="popup" class="popup">
+        <span id="popupClose" class="close">&times;</span>
+        <div id="popupContent"></div>
+    </div>
+
+    <script src="quote.js"></script>
+</body>
+</html>

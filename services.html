@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="quote.html">Quote</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Services</h1>
+        <button id="addServiceButton">Add Service</button>
+        <h2>Existing Services</h2>
+        <ul id="servicesList"></ul>
+    </div>
+
+    <div id="servicePopup" class="popup">
+        <span id="popupClose" class="close">&times;</span>
+        <h2>Create a Service</h2>
+        <form id="serviceForm">
+            <label for="serviceName">Service Name:</label>
+            <input type="text" id="serviceName" name="serviceName" required>
+
+            <label for="serviceDescription">Service Description:</label>
+            <textarea id="serviceDescription" name="serviceDescription" required></textarea>
+
+            <button type="submit">Add Service</button>
+            <button type="button" id="cancelButton">Cancel</button>
+        </form>
+    </div>
+
+    <script src="services.js"></script>
+</body>
+</html>
